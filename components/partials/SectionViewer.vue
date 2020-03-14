@@ -1,21 +1,21 @@
 <template>
   <div :class="visible ? 'visible': ''" class="section-container lg:px-10">
-    <transition name="fade-and-slide">
+    <transition name="fade">
       <Accueil v-if="$route.path === sections.accueil" class="section" />
     </transition>
-    <transition name="fade-and-slide">
+    <transition name="fade">
       <Communications v-if="$route.path === sections.communications" class="section" />
     </transition>
-    <transition name="fade-and-slide">
+    <transition name="fade">
       <Donnees v-if="$route.path === sections.donnees" class="section" />
     </transition>
-    <transition name="fade-and-slide">
+    <transition name="fade">
       <Multimedias v-if="$route.path === sections.multimedias" class="section" />
     </transition>
-    <transition name="fade-and-slide">
+    <transition name="fade">
       <APropos v-if="$route.path === sections.apropos" class="section" />
     </transition>
-    <transition name="fade-and-slide">
+    <transition name="fade">
       <Contacts v-if="$route.path === sections.contacts" class="section" />
     </transition>
   </div>

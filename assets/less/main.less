@@ -13,27 +13,31 @@ html {
 html, body {
   width: 100vw !important;
   height: 100vh !important;
+  overflow: hidden;
 }
 
 h1 {
   font-family: Montserrat;
-  font-size: 90px;
+  font-size: 50px;
   font-weight: 200;
   font-stretch: normal;
   font-style: normal;
-  line-height: 100px;
+  line-height: 55px;
   letter-spacing: normal;
   text-align: center;
   color: @green;
   @media @small {
-    font-size: 58.5px;
-    line-height: 0.52;
+    font-size: 32px;
+    line-height: 1.2;
   }
 }
 h1.shadow {
   text-shadow: 0 2px 14px @green;
   box-shadow: none;
+  font-size: 90px;
+  line-height: 95px;
   @media @small {
+    font-size: 40.5px;
     text-shadow: 0 1px 17px @green;
   }
 }
@@ -99,53 +103,38 @@ h5 {
 }
 
 .page-wrapper {
-  padding: 30px 20px;
   height: 100vh;
   width: 100vw;
 
   .topnav-content {
-    height: 72px;
+    border-bottom: 2px solid #fff102;
   }
 
   .page-content {
     height: calc(100vh - 200px);
 
+    @media @small {
+      height: calc(100vh - 126px);
+      border-bottom: 2px solid @yellow;
+    }
+
     .section-container {
       min-width: 720px;
       height: 100%;
+      overflow: scroll;
 
       @media @small {
         min-width: auto;
       }
 
       .section-wrapper {
-        height: 100%;
+        min-height: 100%;
       }
     }
   }
 
   .footer-content {
     height: 62px;
+    border-top: 2px solid #fff102;
   }
-}
-
-// VUE Transitions
-.fade-and-slide-enter-active {
-  transition: all 1s;
-}
-.fade-and-slide-enter {
-  margin-left: -100vw;
-  position: absolute;
-  top: 88px;
-  transition: all 1s;
-  opacity: 0;
-}
-.fade-and-slide-leave-to {
-  margin-left: -100vw;
-}
-.fade-and-slide-enter {
-  margin-left: 120vw;
-}
-.fade-and-slide-enter-to.section-wrapper {
-  width: 100vw;
 }

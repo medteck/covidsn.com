@@ -8,10 +8,6 @@
 
 <style lang="less" scoped>
   img {
-    height: 102px;
-    @media only screen and (max-width: 1023px) {
-      height: 40px;
-      width: 157px;
-    }
+    height: 92px;
   }
 </style>
