@@ -1,0 +1,78 @@
+<template>
+  <div :class="visible ? 'visible': ''" class="section-container lg:px-10">
+    <transition name="fade-and-slide">
+      <Accueil v-if="$route.hash === sections.accueil" class="section" />
+    </transition>
+    <transition name="fade-and-slide">
+      <Communications v-if="$route.hash === sections.communications" class="section" />
+    </transition>
+    <transition name="fade-and-slide">
+      <Donnees v-if="$route.hash === sections.donnees" class="section" />
+    </transition>
+    <transition name="fade-and-slide">
+      <Multimedias v-if="$route.hash === sections.multimedias" class="section" />
+    </transition>
+    <transition name="fade-and-slide">
+      <APropos v-if="$route.hash === sections.apropos" class="section" />
+    </transition>
+    <transition name="fade-and-slide">
+      <Contacts v-if="$route.hash === sections.contacts" class="section" />
+    </transition>
+  </div>
+</template>
+
+<script>
+import Accueil from '~/components/sections/Accueil.vue'
+import Communications from '~/components/sections/Communications.vue'
+import Donnees from '~/components/sections/Donnees.vue'
+import Multimedias from '~/components/sections/Multimedias.vue'
+import APropos from '~/components/sections/APropos.vue'
+import Contacts from '~/components/sections/Contacts.vue'
+
+export default {
+  components: {
+    Accueil,
+    Communications,
+    Donnees,
+    Multimedias,
+    APropos,
+    Contacts
+  },
+  data () {
+    return {
+      currentSection: null,
+      visible: false,
+      sections: {
+        accueil: '',
+        communications: '#communications',
+        donnees: '#donnees',
+        multimedias: '#multimedias',
+        apropos: '#a-propos',
+        contacts: '#contacts'
+      }
+    }
+  },
+  watch: {
+    $route (to) {
+      if (Object.values(this.sections).find(value => value === to.hash)) {
+        this.currentSection = to.hash
+        this.visible = true
+      } else {
+        location.hash = ''
+      }
+    }
+  },
+  mounted () {
+    this.visible = true
+  }
+}
+</script>
+
+<style scoped>
+  .section-container {
+    opacity: 0;
+  }
+  .section-container.visible {
+    opacity: 1;
+  }
+</style>

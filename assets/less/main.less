@@ -1,0 +1,151 @@
+// VARIABLES
+@yellow:            #FFF102;
+@green:             #01A551;
+
+// QUERIES
+@small:    ~"only screen and (max-width: 1023px)";
+
+// GLOBALS :
+html {
+  font-family: 'Montserrat', sans-serif;
+  // background-image: radial-gradient(circle at 52% 47%, #131e37, #000000 111%);
+}
+html, body {
+  width: 100vw !important;
+  height: 100vh !important;
+}
+
+h1 {
+  font-family: Montserrat;
+  font-size: 90px;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 100px;
+  letter-spacing: normal;
+  text-align: center;
+  color: @green;
+  @media @small {
+    font-size: 58.5px;
+    line-height: 0.52;
+  }
+}
+h1.shadow {
+  text-shadow: 0 2px 14px @green;
+  box-shadow: none;
+  @media @small {
+    text-shadow: 0 1px 17px @green;
+  }
+}
+h2 {
+  font-family: Montserrat;
+  font-size: 32px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 37px;
+  letter-spacing: normal;
+  text-align: center;
+  @media @small {
+    font-size: 22.5px;
+    line-height: 1.34;
+  }
+}
+h3 {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 35px;
+  letter-spacing: normal;
+  text-align: center;
+  @media @small {
+    font-size: 14px;
+    line-height: 1.48;
+  }
+}
+h4 {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+}
+h5 {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+}
+.link {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: @green;
+}
+
+// PAGE AND SECTIONS
+.page-enter-active, .page-leave-active {
+  transition: opacity .5s;
+}
+.page-enter, .page-leave-active {
+  opacity: 0;
+}
+
+.page-wrapper {
+  padding: 30px 20px;
+  height: 100vh;
+  width: 100vw;
+
+  .topnav-content {
+    height: 72px;
+  }
+
+  .page-content {
+    height: calc(100vh - 200px);
+
+    .section-container {
+      min-width: 720px;
+      height: 100%;
+
+      @media @small {
+        min-width: auto;
+      }
+
+      .section-wrapper {
+        height: 100%;
+      }
+    }
+  }
+
+  .footer-content {
+    height: 62px;
+  }
+}
+
+// VUE Transitions
+.fade-and-slide-enter-active {
+  transition: all 1s;
+}
+.fade-and-slide-enter {
+  margin-left: -100vw;
+  position: absolute;
+  top: 88px;
+  transition: all 1s;
+  opacity: 0;
+}
+.fade-and-slide-leave-to {
+  margin-left: -100vw;
+}
+.fade-and-slide-enter {
+  margin-left: 120vw;
+}
+.fade-and-slide-enter-to.section-wrapper {
+  width: 100vw;
+}
