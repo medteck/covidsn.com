@@ -63,5 +63,17 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  /*
+  ** Router
+  */
+  router: {
+    extendRoutes (routes, resolve) {
+      routes.push({
+        name: 'sections',
+        path: '/*',
+        component: resolve(__dirname, 'pages/index.vue')
+      })
+    }
   }
 }

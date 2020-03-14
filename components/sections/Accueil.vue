@@ -6,7 +6,8 @@
         Sénégal
       </h1>
       <h2>
-        Nous partageons les informations importantes sur le Corona Virus au Sénégal.
+        Nous partageons les informations importantes <br>
+        sur le Corona Virus au Sénégal.
       </h2>
     </div>
   </div>

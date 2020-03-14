@@ -94,23 +94,23 @@ export default {
         },
         {
           title: 'Communications gouvernementales',
-          path: '/#communications'
+          path: '/communications'
         },
         {
           title: 'Données',
-          path: '/#donnees'
+          path: '/donnees'
         },
         {
           title: 'Multimédias',
-          path: '/#multimedias'
+          path: '/multimedias'
         },
         {
           title: 'À propos',
-          path: '/#a-propos'
+          path: '/a-propos'
         },
         {
           title: 'Contacts d\'urgence',
-          path: '/#contacts'
+          path: '/contacts'
         }
       ],
       content: {
@@ -127,14 +127,6 @@ export default {
           subscribe: 'Souscrire'
         }
       }
-    }
-  },
-  computed: {
-    lang () {
-      return this.$route.params.lang || ''
-    },
-    trans () {
-      return this.content[this.lang || 'en']
     }
   },
   watch: {

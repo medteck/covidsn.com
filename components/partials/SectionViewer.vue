@@ -1,22 +1,22 @@
 <template>
   <div :class="visible ? 'visible': ''" class="section-container lg:px-10">
     <transition name="fade-and-slide">
-      <Accueil v-if="$route.hash === sections.accueil" class="section" />
+      <Accueil v-if="$route.path === sections.accueil" class="section" />
     </transition>
     <transition name="fade-and-slide">
-      <Communications v-if="$route.hash === sections.communications" class="section" />
+      <Communications v-if="$route.path === sections.communications" class="section" />
     </transition>
     <transition name="fade-and-slide">
-      <Donnees v-if="$route.hash === sections.donnees" class="section" />
+      <Donnees v-if="$route.path === sections.donnees" class="section" />
     </transition>
     <transition name="fade-and-slide">
-      <Multimedias v-if="$route.hash === sections.multimedias" class="section" />
+      <Multimedias v-if="$route.path === sections.multimedias" class="section" />
     </transition>
     <transition name="fade-and-slide">
-      <APropos v-if="$route.hash === sections.apropos" class="section" />
+      <APropos v-if="$route.path === sections.apropos" class="section" />
     </transition>
     <transition name="fade-and-slide">
-      <Contacts v-if="$route.hash === sections.contacts" class="section" />
+      <Contacts v-if="$route.path === sections.contacts" class="section" />
     </transition>
   </div>
 </template>
@@ -43,12 +43,12 @@ export default {
       currentSection: null,
       visible: false,
       sections: {
-        accueil: '',
-        communications: '#communications',
-        donnees: '#donnees',
-        multimedias: '#multimedias',
-        apropos: '#a-propos',
-        contacts: '#contacts'
+        accueil: '/',
+        communications: '/communications',
+        donnees: '/donnees',
+        multimedias: '/multimedias',
+        apropos: '/a-propos',
+        contacts: '/contacts'
       }
     }
   },
@@ -67,12 +67,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-  .section-container {
-    opacity: 0;
-  }
-  .section-container.visible {
-    opacity: 1;
-  }
-</style>
