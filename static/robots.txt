@@ -1,0 +1,4 @@
+User-agent: *
+Allow: *
+Disallow: /api/*
+Sitemap: https://covidsn.com/sitemap.xml
