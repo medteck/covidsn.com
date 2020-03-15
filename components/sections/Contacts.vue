@@ -5,7 +5,7 @@
         Contacts d'urgence
       </h1>
       <p class="mt-4 ml-2 text-gray-600 text-lg">
-        Voici les numéros de téléphone à appeler en cas d'urgence.
+        Voici les numéros de téléphone à appeler en cas d'urgence concernant le Corona Virus.
       </p>
     </div>
     <div class="flex flex-wrap justify-center mt-10">
@@ -31,6 +31,18 @@ export default {
     contacts: {
       required: true,
       type: Array
+    }
+  },
+  head () {
+    return {
+      title: 'Contacts d\'urgence',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Voici les numéros de téléphone à appeler en cas d\'urgence concernant le Corona Virus.'
+        }
+      ]
     }
   }
 }

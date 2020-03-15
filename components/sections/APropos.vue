@@ -67,6 +67,18 @@ export default {
       required: true,
       type: Object
     }
+  },
+  head () {
+    return {
+      title: 'COVID-19 Sénégal - À propos de nous',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Nous sommes un groupe d\'acteurs dans les domaines de la santé et du digital au Sénégal.'
+        }
+      ]
+    }
   }
 }
 </script>

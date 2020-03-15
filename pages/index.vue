@@ -15,7 +15,7 @@ export default {
     SectionViewer
   },
   async asyncData ({ req, $axios }) {
-    let host = 'https://covidsn.com'
+    const host = 'https://covidsn.com'
 
     const accueil = await $axios.get(`${host}/api/pages/accueil`)
     const communications = await $axios.get(`${host}/api/collections/communications`)

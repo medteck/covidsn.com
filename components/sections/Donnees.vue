@@ -64,6 +64,18 @@ export default {
       required: true,
       type: Object
     }
+  },
+  head () {
+    return {
+      title: 'COVID-19 Sénégal - Données statiques',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Données statiques du COVID-19 sur le territoire national sénégalais'
+        }
+      ]
+    }
   }
 }
 </script>

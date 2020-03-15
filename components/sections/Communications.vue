@@ -27,6 +27,18 @@ export default {
       required: true,
       type: Array
     }
+  },
+  head () {
+    return {
+      title: 'COVID-19 Sénégal - Communications gouvernementales',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Les différentes publications et communiqués du gouvernement du Sénégal, concernant le Corona Virus.'
+        }
+      ]
+    }
   }
 }
 </script>

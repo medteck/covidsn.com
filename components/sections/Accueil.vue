@@ -18,6 +18,18 @@ export default {
       required: true,
       type: Object
     }
+  },
+  head () {
+    return {
+      title: 'COVID-19 Sénégal',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Nous partageons les informations importantes sur le Corona Virus au Sénégal.'
+        }
+      ]
+    }
   }
 }
 </script>
