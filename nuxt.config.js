@@ -75,5 +75,12 @@ export default {
         component: resolve(__dirname, 'pages/index.vue')
       })
     }
+  },
+  /*
+  ** Server Configuration
+  */
+  server: {
+    port: 3221,
+    host: '127.0.0.1'
   }
 }
