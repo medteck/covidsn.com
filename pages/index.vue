@@ -15,7 +15,7 @@ export default {
     SectionViewer
   },
   async asyncData ({ req, $axios }) {
-    let host = ''
+    let host = 'https://covidsn.com'
     if (process.server) {
       host = `http://${req.headers.host}`
     }
