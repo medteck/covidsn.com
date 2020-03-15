@@ -15,11 +15,17 @@ export default {
     SectionViewer
   },
   async asyncData ({ req, $axios }) {
-    const accueil = await $axios.get('http://localhost:3221/api/pages/accueil')
-    const communications = await $axios.get('http://localhost:3221/api/collections/communications')
-    const donnees = await $axios.get('http://localhost:3221/api/pages/donnees')
-    const apropos = await $axios.get('http://localhost:3221/api/pages/apropos')
-    const contacts = await $axios.get('http://localhost:3221/api/collections/contacts')
+    let host = ''
+    if (process.server) {
+      host = `http://${req.headers.host}`
+    }
+
+    const accueil = await $axios.get(`${host}/api/pages/accueil`)
+    const communications = await $axios.get(`${host}/api/collections/communications`)
+    const donnees = await $axios.get(`${host}/api/pages/donnees`)
+    const apropos = await $axios.get(`${host}/api/pages/apropos`)
+    const contacts = await $axios.get(`${host}/api/collections/contacts`)
+
     return {
       accueil: accueil.data,
       communications: communications.data,
