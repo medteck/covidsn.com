@@ -1,22 +1,26 @@
 {
   "name": "covidsn.com",
   "version": "1.0.0",
-  "description": "&lt;template&gt;",
+  "description": "Informations essentielles sur le Corona Virus au Sénégal",
   "author": "Medteck",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nodemon --watch api --exec \"nuxt\"",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@directus/sdk-js": "^6.0.5",
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^3.0.0-0",
     "less": "^3.11.1",
     "less-loader": "^5.0.0",
-    "nuxt": "^2.0.0"
+    "marked": "^0.8.0",
+    "nuxt": "^2.0.0",
+    "redis": "^3.0.2",
+    "typescript": "^3.8.3"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^1.0.0",

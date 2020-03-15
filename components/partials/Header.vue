@@ -70,10 +70,10 @@ export default {
           title: 'Données',
           path: '/donnees'
         },
-        {
-          title: 'Multimédias',
-          path: '/multimedias'
-        },
+        // {
+        //   title: 'Multimédias',
+        //   path: '/multimedias'
+        // },
         {
           title: 'À propos',
           path: '/a-propos'

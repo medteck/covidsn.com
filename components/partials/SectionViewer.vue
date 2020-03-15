@@ -1,22 +1,45 @@
 <template>
   <div :class="visible ? 'visible': ''" class="section-container lg:px-10">
     <transition name="fade">
-      <Accueil v-if="$route.path === sections.accueil" class="section" />
+      <Accueil
+        v-if="$route.path === sections.accueil"
+        :accueil="accueil"
+        class="section"
+      />
     </transition>
     <transition name="fade">
-      <Communications v-if="$route.path === sections.communications" class="section" />
+      <Communications
+        v-if="$route.path === sections.communications"
+        :communications="communications"
+        class="section"
+      />
     </transition>
     <transition name="fade">
-      <Donnees v-if="$route.path === sections.donnees" class="section" />
+      <Donnees
+        v-if="$route.path === sections.donnees"
+        :donnees="donnees"
+        class="section"
+      />
     </transition>
     <transition name="fade">
-      <Multimedias v-if="$route.path === sections.multimedias" class="section" />
+      <Multimedias
+        v-if="$route.path === sections.multimedias"
+        class="section"
+      />
     </transition>
     <transition name="fade">
-      <APropos v-if="$route.path === sections.apropos" class="section" />
+      <APropos
+        v-if="$route.path === sections.apropos"
+        :apropos="apropos"
+        class="section"
+      />
     </transition>
     <transition name="fade">
-      <Contacts v-if="$route.path === sections.contacts" class="section" />
+      <Contacts
+        v-if="$route.path === sections.contacts"
+        :contacts="contacts"
+        class="section"
+      />
     </transition>
   </div>
 </template>
@@ -37,6 +60,28 @@ export default {
     Multimedias,
     APropos,
     Contacts
+  },
+  props: {
+    accueil: {
+      required: true,
+      type: Object
+    },
+    communications: {
+      required: true,
+      type: Array
+    },
+    donnees: {
+      required: true,
+      type: Object
+    },
+    apropos: {
+      required: true,
+      type: Object
+    },
+    contacts: {
+      required: true,
+      type: Array
+    }
   },
   data () {
     return {

@@ -2,16 +2,25 @@
   <div class="section-wrapper flex relative p-4">
     <div class="m-auto px-10">
       <h1 class="shadow">
-        COVID-19 <br>
-        Sénégal
+        {{ accueil.titre }}
       </h1>
       <h2>
-        Nous partageons les informations importantes <br>
-        sur le Corona Virus au Sénégal.
+        {{ accueil.sous_titre }}
       </h2>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    accueil: {
+      required: true,
+      type: Object
+    }
+  }
+}
+</script>
 
 <style scoped>
   h2 {

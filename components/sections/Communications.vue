@@ -8,53 +8,25 @@
         Les différentes publications et communiqués du gouvernement du Sénégal, concernant le Corona Virus. <br>
       </p>
     </div>
-    <article class="p-8">
+    <article v-for="communication in communications" :key="communication.id" class="p-8">
       <hr class="py-6">
       <h2 class="text-left mb-4">
-        Discours du président de la république
+        {{ communication.titre }}
       </h2>
       <p class="mt-4 py-4 text-gray-700">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type
-        specimen book. It has survived not only five centuries, but also the leap into
-        electronic typesetting, remaining essentially unchanged. It was popularised
-        in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-        passages, and more recently with desktop publishing software like Aldus
-        PageMaker including versions of Lorem Ipsum.
-      </p>
-    </article>
-    <article class="p-8">
-      <hr class="py-6">
-      <h2 class="text-left mb-4">
-        Discours du président de la république
-      </h2>
-      <p class="mt-4 p-4 text-gray-700">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type
-        specimen book. It has survived not only five centuries, but also the leap into
-        electronic typesetting, remaining essentially unchanged. It was popularised
-        in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-        passages, and more recently with desktop publishing software like Aldus
-        PageMaker including versions of Lorem Ipsum.
-      </p>
-    </article>
-    <article class="p-8">
-      <hr class="py-6">
-      <h2 class="text-left mb-4">
-        Discours du président de la république
-      </h2>
-      <p class="mt-4 p-4 text-gray-700">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type
-        specimen book. It has survived not only five centuries, but also the leap into
-        electronic typesetting, remaining essentially unchanged. It was popularised
-        in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-        passages, and more recently with desktop publishing software like Aldus
-        PageMaker including versions of Lorem Ipsum.
+        {{ communication.description }}
       </p>
     </article>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    communications: {
+      required: true,
+      type: Array
+    }
+  }
+}
+</script>

@@ -32,6 +32,13 @@ export default {
   plugins: [
   ],
   /*
+  ** Server Middlewares
+  ** API to use as a proxy
+  */
+  serverMiddleware: [
+    '~/api/index.js'
+  ],
+  /*
   ** Nuxt.js dev-modules
   */
   buildModules: [
@@ -69,10 +76,18 @@ export default {
   */
   router: {
     extendRoutes (routes, resolve) {
-      routes.push({
-        name: 'sections',
-        path: '/*',
-        component: resolve(__dirname, 'pages/index.vue')
+      [
+        '/communications',
+        '/donnees',
+        '/multimedias',
+        '/a-propos',
+        '/contacts'
+      ].forEach((path) => {
+        routes.push({
+          name: `section-${path.substring(1, path.length - 1)}`,
+          path,
+          component: resolve(__dirname, 'pages/index.vue')
+        })
       })
     }
   },
