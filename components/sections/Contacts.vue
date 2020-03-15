@@ -9,7 +9,6 @@
       </p>
     </div>
     <div class="flex flex-wrap justify-center mt-10">
-
       <div class="w-1/2 p-4">
         <div class="w-full rounded shadow-lg">
           <h2 class="text-center text-green">
@@ -22,7 +21,6 @@
           </div>
         </div>
       </div>
-
       <div class="w-1/2 p-4">
         <div class="w-full rounded shadow-lg">
           <h2 class="text-center text-green">
@@ -35,7 +33,6 @@
           </div>
         </div>
       </div>
-
       <div class="w-1/2 p-4">
         <div class="w-full rounded shadow-lg">
           <h2 class="text-center text-green">
@@ -48,7 +45,6 @@
           </div>
         </div>
       </div>
-
       <div class="w-1/2 p-4">
         <div class="w-full rounded shadow-lg">
           <h2 class="text-center text-green">
@@ -61,7 +57,6 @@
           </div>
         </div>
       </div>
-
       <div class="w-1/2 p-4">
         <div class="w-full rounded shadow-lg">
           <h2 class="text-center text-green">
@@ -74,7 +69,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </template>

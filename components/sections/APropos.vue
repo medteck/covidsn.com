@@ -27,12 +27,13 @@
           </h2>
         </div>
         <div class="flex flex-wrap p-4 justify-between">
-
           <div class="w-1/3 p-6">
             <div class="w-full overflow-hidden rounded shadow-lg">
               <img class="w-full" src="/img/equipe/ahmath-bamba-mbacke.jpg" alt="Professeur Ahmath Bamba Mbacke">
               <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">Pr Ahmath B. Mbacke</div>
+                <div class="font-bold text-xl mb-2">
+                  Pr Ahmath B. Mbacke
+                </div>
                 <p class="text-gray-700 text-base">
                   Coordonnateur des opérations
                 </p>
@@ -51,12 +52,13 @@
               </div>
             </div>
           </div>
-
           <div class="w-1/3 p-6">
             <div class="w-full overflow-hidden rounded shadow-lg">
               <img class="w-full" src="/img/equipe/barkham-malang-diedhiou.jpeg" alt="Professeur Ahmath Bamba Mbacke">
               <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">Elhadji Malang D.</div>
+                <div class="font-bold text-xl mb-2">
+                  Elhadji Malang D.
+                </div>
                 <p class="text-gray-700 text-base">
                   Coordonnateur multimédia
                 </p>
@@ -80,12 +82,13 @@
               </div>
             </div>
           </div>
-
           <div class="w-1/3 p-6">
             <div class="w-full overflow-hidden rounded shadow-lg">
               <img class="w-full" src="/img/equipe/mohamed-thiam.jpeg" alt="Professeur Ahmath Bamba Mbacke">
               <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">Mohamed Thiam</div>
+                <div class="font-bold text-xl mb-2">
+                  Mohamed Thiam
+                </div>
                 <p class="text-gray-700 text-base">
                   Chef de projet Web et Devops
                 </p>
@@ -109,7 +112,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
