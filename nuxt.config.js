@@ -71,6 +71,19 @@ export default {
   axios: {
   },
   /*
+  ** PWA configuration
+  */
+  pwa: {
+    manifest: {
+      name: 'COVID-19 Sénégal',
+      lang: 'fr'
+    },
+    icon: {
+      iconSrc: 'https://covidsn.com/img/senegal-emergent.png',
+      iconFileName: 'COVID-19 Senegal'
+    }
+  },
+  /*
   ** Build configuration
   */
   build: {
