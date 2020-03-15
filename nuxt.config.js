@@ -32,13 +32,6 @@ export default {
   plugins: [
   ],
   /*
-  ** Server Middlewares
-  ** API to use as a proxy
-  */
-  serverMiddleware: [
-    '~/api/index.js'
-  ],
-  /*
   ** Nuxt.js dev-modules
   */
   buildModules: [
@@ -53,7 +46,23 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/proxy'
+  ],
+  /*
+  ** Server Middlewares
+  ** API to use as a proxy
+  */
+  proxy: {
+    '/api': {
+      target: 'http://localhost:3221',
+      pathRewrite: {
+        '^/api': '/api'
+      }
+    }
+  },
+  serverMiddleware: [
+    '~/api/index.js'
   ],
   /*
   ** Axios module configuration
