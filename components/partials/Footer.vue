@@ -3,12 +3,12 @@
     <div class="flex w-1/2 p-4 font-medium link">
       <div class="flex-initial px-2">
         <a href="https://www.facebook.com/" target="_blank">
-          <img src="/img/icons/facebook.svg" alt="COVID19 Sénégal - Facebook" width="32px">
+          <img src="/img/icons/facebook.svg" width="32px">
         </a>
       </div>
       <div class="flex-initial px-2">
         <a href="https://www.twitter.com/" target="_blank">
-          <img src="/img/icons/twitter.svg" alt="COVID19 Sénégal - Facebook" width="32px">
+          <img src="/img/icons/twitter.svg" width="32px">
         </a>
       </div>
     </div>

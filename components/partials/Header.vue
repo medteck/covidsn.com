@@ -121,5 +121,12 @@ svg {
 }
 a {
   color: #01A551;
+  transition: all .5s;
+}
+a.nuxt-link-exact-active {
+  background-color: #FFF102;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all .5s;
 }
 </style>

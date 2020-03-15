@@ -2,8 +2,11 @@
   <div class="p-4 section-wrapper">
     <div class="my-6">
       <h1 class="text-left">
-        Publications du gouvernement sur le COVID-19
+        Communications gouvernementales
       </h1>
+      <p class="mt-4 ml-2 text-gray-600 text-lg">
+        Les différentes publications et communiqués du gouvernement du Sénégal, concernant le Corona Virus. <br>
+      </p>
     </div>
     <article class="p-8">
       <hr class="py-6">
