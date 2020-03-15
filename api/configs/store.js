@@ -5,9 +5,6 @@ const { promisify } = require('util')
 const redisClient = redis.createClient()
 const getAsync = promisify(redisClient.get).bind(redisClient)
 
-// Create dummy :
-redisClient.set('localhost:3221', '{"id":"covidsn","cdn_url":"https://directus.medteck.xyz","api_credentials":{"url":"https://directus.medteck.xyz","project":"covidsn","token":"r4kgbU67Zs72WfVF9PzB6li9"}}')
-
 global.directusClients = {}
 
 const getDomain = (req) => {
