@@ -19,6 +19,7 @@ export default {
     if (process.server) {
       host = `http://${req.headers.host}`
     }
+    console.log(`Host: ${host}`)
 
     const accueil = await $axios.get(`${host}/api/pages/accueil`)
     const communications = await $axios.get(`${host}/api/collections/communications`)
