@@ -8,7 +8,7 @@
         Les différentes publications et communiqués du gouvernement du Sénégal, concernant le Corona Virus. <br>
       </p>
     </div>
-    <article v-for="communication in communications" :key="communication.id" class="p-8">
+    <article v-for="communication in communications" :key="communication.id" class="py-8 pl-8">
       <hr class="py-6">
       <h2 class="text-left font-bold md:font-light mb-4">
         {{ communication.titre }}

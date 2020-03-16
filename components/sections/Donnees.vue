@@ -1,9 +1,12 @@
 <template>
   <div class="section-wrapper p-4">
-    <div class="my-6">
+    <div class="my-6 px-4">
       <h1 class="text-left font-bold md:font-light">
         Données statiques du COVID-19 sur le territoire
       </h1>
+      <p class="mt-4 text-gray-600 text-lg">
+        Ces données sont constamment mises à jour.
+      </p>
     </div>
     <div class="flex flex-wrap p-6 mt-10">
       <div class="w-full lg:w-1/3 sm:p-2 md:p-12 lg:p-4">

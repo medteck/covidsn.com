@@ -1,6 +1,6 @@
 <template>
   <div class="section-wrapper p-4">
-    <div class="my-6">
+    <div class="my-6 px-4">
       <h1 class="text-left font-bold md:font-light">
         À propos de nous
       </h1>
