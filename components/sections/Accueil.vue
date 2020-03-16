@@ -35,6 +35,9 @@ export default {
 </script>
 
 <style scoped>
+  .section-wrapper {
+    height: calc(100vh - 192px);
+  }
   h2 {
     margin-top: 34px;
   }
