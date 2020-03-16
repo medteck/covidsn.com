@@ -15,7 +15,10 @@ export default {
     SectionViewer
   },
   async asyncData ({ req, $axios }) {
-    const host = 'https://covidsn.com'
+    let host = 'https://covidsn.com'
+    if (process.env.NODE_ENV !== 'production') {
+      host = 'http://localhost:3221'
+    }
 
     const accueil = await $axios.get(`${host}/api/pages/accueil`)
     const communications = await $axios.get(`${host}/api/collections/communications`)

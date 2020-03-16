@@ -1,7 +1,7 @@
 <template>
   <div class="section-wrapper p-4">
     <div class="my-6">
-      <h1 class="text-left">
+      <h1 class="text-left font-bold md:font-light">
         Contacts d'urgence
       </h1>
       <p class="mt-4 ml-2 text-gray-600 text-lg">
@@ -9,17 +9,19 @@
       </p>
     </div>
     <div class="flex flex-wrap justify-center mt-10">
-      <div v-for="contact in contacts" :key="contact.id" class="w-1/2 p-4">
-        <div class="w-full rounded shadow-lg">
-          <h2 class="text-center text-green">
-            {{ contact.numero }}
-          </h2>
-          <div class="px-6 py-4">
-            <div class="text-xl mb-2 text-center">
-              {{ contact.titre }}
+      <div v-for="contact in contacts" :key="contact.id" class="w-full md:w-1/2 p-4">
+        <a :href="`tel:${contact.numero}`">
+          <div class="w-full rounded shadow-lg">
+            <h2 class="text-center font-bold md:font-medium text-green">
+              {{ contact.numero }}
+            </h2>
+            <div class="px-6 py-4">
+              <div class="text-xl mb-2 text-center">
+                {{ contact.titre }}
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>

@@ -1,12 +1,12 @@
 <template>
   <div class="section-wrapper p-4">
     <div class="my-6">
-      <h1 class="text-left">
+      <h1 class="text-left font-bold md:font-light">
         Données statiques du COVID-19 sur le territoire
       </h1>
     </div>
-    <div class="flex w-full p-6 mt-10">
-      <div class="w-1/3 sm:w-1/2 xs:w-full p-4">
+    <div class="flex flex-wrap p-6 mt-10">
+      <div class="w-full lg:w-1/3 sm:p-2 md:p-12 lg:p-4">
         <div class="w-full rounded overflow-hidden shadow-xl">
           <div class="text-6xl text-center">
             {{ donnees.infectes }}
@@ -22,7 +22,7 @@
         </div>
       </div>
 
-      <div class="w-1/3 sm:w-1/2 xs:w-full p-4">
+      <div class="w-full lg:w-1/3 sm:p-2 md:p-12 lg:p-4">
         <div class="w-full rounded overflow-hidden shadow-xl">
           <div class="text-6xl text-center">
             {{ donnees.gueris }}
@@ -38,7 +38,7 @@
         </div>
       </div>
 
-      <div class="w-1/3 sm:w-1/2 xs:w-full p-4">
+      <div class="w-full lg:w-1/3 sm:p-2 md:p-12 lg:p-4">
         <div class="w-full rounded overflow-hidden shadow-xl">
           <div class="text-6xl text-center">
             {{ donnees.deces }}

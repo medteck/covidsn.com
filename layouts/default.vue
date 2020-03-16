@@ -4,7 +4,7 @@
     <div class="page-content">
       <nuxt />
     </div>
-    <div class="footer-content invisible lg:visible">
+    <div class="footer-content">
       <Footer />
     </div>
   </div>
