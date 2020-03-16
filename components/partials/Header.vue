@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="topnav-content flex items-center">
+    <div class="topnav-content bg-white fixed lg:relative w-full flex items-center">
       <div class="flex-1 lg:w-1/4 h-auto p-4 flex justify-around lg:justify-start">
         <Logo />
       </div>
@@ -11,7 +11,7 @@
           </nuxt-link>
         </span>
       </div>
-      <div class="absolute top-0 right-0 mt-10 mr-4 visible lg:invisible z-30" @click="toggleMobileNav">
+      <div class="absolute top-0 right-0 mt-8 mr-4 visible lg:invisible z-30" @click="toggleMobileNav">
         <svg v-if="!mobileNavOpened" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 32 32">
           <g fill="none" fill-rule="evenodd" stroke="#01A551" stroke-width="1.765" transform="translate(1 1)">
             <g stroke-linecap="round">

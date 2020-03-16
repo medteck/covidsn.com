@@ -1,5 +1,5 @@
 <template>
-  <div :class="visible ? 'visible': ''" class="section-container lg:px-10">
+  <div :class="visible ? 'visible': ''" class="section-container lg:px-10 pt-24 lg:pt-0">
     <transition name="fade">
       <Accueil
         v-if="$route.path === sections.accueil"
