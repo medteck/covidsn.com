@@ -13,8 +13,11 @@ export default {
       { name: 'google-site-verification', content: 'NLRQZNBwYaBC8sQNpIlW9NmG6Fc8ps5jTOeqoEwb2EE' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/logo-covidsn.png' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:200,300,500,600&display=swap' }
+    ],
+    script: [
+      { src: 'https://platform.twitter.com/widgets.js' }
     ]
   },
   /*

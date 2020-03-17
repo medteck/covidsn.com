@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="topnav-content bg-white fixed lg:relative w-full flex items-center">
+    <div class="topnav-content bg-white fixed lg:relative w-full flex items-center z-30">
       <div class="flex-1 lg:w-1/4 h-auto p-4 flex justify-around lg:justify-start">
         <Logo />
       </div>

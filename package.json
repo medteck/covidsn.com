@@ -20,7 +20,8 @@
     "marked": "^0.8.0",
     "nuxt": "^2.0.0",
     "redis": "^3.0.2",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "vue-tweet-embed": "^2.4.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",

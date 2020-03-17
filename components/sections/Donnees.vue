@@ -9,59 +9,18 @@
       </p>
     </div>
     <div class="flex flex-wrap p-6 mt-10">
-      <div class="w-full lg:w-1/3 sm:p-2 md:p-12 lg:p-4">
-        <div class="w-full rounded overflow-hidden shadow-xl">
-          <div class="text-6xl text-center">
-            {{ donnees.infectes }}
-          </div>
-          <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2 text-center">
-              Infectés
-            </div>
-            <p class="text-gray-600 text-base">
-              {{ donnees.texte_infectes }}
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="w-full lg:w-1/3 sm:p-2 md:p-12 lg:p-4">
-        <div class="w-full rounded overflow-hidden shadow-xl">
-          <div class="text-6xl text-center">
-            {{ donnees.gueris }}
-          </div>
-          <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2 text-center">
-              Guéris
-            </div>
-            <p class="text-gray-600 text-base">
-              {{ donnees.texte_gueris }}
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="w-full lg:w-1/3 sm:p-2 md:p-12 lg:p-4">
-        <div class="w-full rounded overflow-hidden shadow-xl">
-          <div class="text-6xl text-center">
-            {{ donnees.deces }}
-          </div>
-          <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2 text-center">
-              Décès
-            </div>
-            <p class="text-gray-600 text-base">
-              {{ donnees.texte_deces }}
-            </p>
-          </div>
-        </div>
-      </div>
+      <DataBlocks :donnees="donnees" :show-text="true" />
     </div>
   </div>
 </template>
 
 <script>
+import DataBlocks from '~/components/partials/DataBlocks.vue'
+
 export default {
+  components: {
+    DataBlocks
+  },
   props: {
     donnees: {
       required: true,

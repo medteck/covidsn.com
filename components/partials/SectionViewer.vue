@@ -4,6 +4,7 @@
       <Accueil
         v-if="$route.path === sections.accueil"
         :accueil="accueil"
+        :donnees="donnees"
         class="section"
       />
     </transition>

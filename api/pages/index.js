@@ -32,8 +32,11 @@ class PagesController {
           'texte_infectes',
           'gueris',
           'texte_gueris',
+          'traitements',
+          'texte_traitements',
           'deces',
-          'texte_deces'
+          'texte_deces',
+          'modified_on'
         ]
       }
     ).then((result) => {
