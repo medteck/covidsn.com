@@ -5,11 +5,11 @@
         Données statiques du COVID-19 sur le territoire
       </h1>
       <p class="mt-4 text-gray-600 text-lg">
-        Ces données sont constamment mises à jour.
+        Ces données ont été mises à jour pour à la date suivante : <b class="text-black">{{ donnees.modified_on }}</b>
       </p>
     </div>
     <div class="flex flex-wrap p-6 mt-10">
-      <DataBlocks :donnees="donnees" :show-text="true" />
+      <DataBlocks :donnees="donnees" :show-text="true" :show-updated="false" />
     </div>
   </div>
 </template>

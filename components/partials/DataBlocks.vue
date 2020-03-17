@@ -64,8 +64,8 @@
       </div>
     </div>
 
-    <div class="w-full text-sm text-gray-600 text-right px-4">
-      Dernière mise à jour: {{ updatedAt }}
+    <div class="w-full text-sm text-gray-600 text-right px-4" v-if="showUpdated">
+      Dernière mise à jour: {{ donnees.modified_on }}
     </div>
   </div>
 </template>
@@ -79,13 +79,11 @@ export default {
     },
     showText: {
       required: true,
-      type: Boolean,
-      default: false
-    }
-  },
-  computed: {
-    updatedAt () {
-      return (new Date(this.donnees.modified_on)).toLocaleString()
+      type: Boolean
+    },
+    showUpdated: {
+      required: true,
+      type: Boolean
     }
   }
 }

@@ -7,7 +7,7 @@
       <h2>
         {{ accueil.sous_titre }}
       </h2>
-      <DataBlocks :donnees="donnees" :show-text="false" class="mt-8" />
+      <DataBlocks :donnees="donnees" :show-text="false" :show-updated="true" class="mt-8" />
     </div>
   </div>
 </template>
