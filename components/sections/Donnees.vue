@@ -12,19 +12,19 @@
       <DataBlocks :donnees="donnees" :show-text="true" :show-updated="true"  />
     </div>
     <div v-if="!isMobile" class="w-full p-6 hidden md:block">
-      <PowerBidashboard />
+      <PowerBiDashboard />
     </div>
   </div>
 </template>
 
 <script>
 import DataBlocks from '~/components/partials/DataBlocks.vue'
-import PowerBidashboard from '~/components/partials/PowerBidashboard.vue'
+import PowerBiDashboard from '~/components/partials/PowerBiDashboard.vue'
 
 export default {
   components: {
     DataBlocks,
-    PowerBidashboard
+    PowerBiDashboard
   },
   props: {
     donnees: {
