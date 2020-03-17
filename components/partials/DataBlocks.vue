@@ -39,7 +39,7 @@
         </div>
         <div class="px-6 py-4">
           <div :class="!showText ? 'lg:h-20 xl:h-auto' : ''" class="font-bold text-xl mb-2 text-center">
-            En traitement
+            Sous traitement
           </div>
           <p v-if="showText" class="text-gray-600 text-base">
             {{ donnees.texte_traitements }}

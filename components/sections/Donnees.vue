@@ -8,23 +8,37 @@
         Ces données ont été mises à jour pour à la date suivante : <b class="text-black">{{ donnees.modified_on }}</b>
       </p>
     </div>
-    <div class="flex flex-wrap p-6 mt-10">
-      <DataBlocks :donnees="donnees" :show-text="true" :show-updated="false" />
+    <div class="w-full p-6 mt-10 md:hidden">
+      <DataBlocks :donnees="donnees" :show-text="true" :show-updated="true"  />
+    </div>
+    <div v-if="!isMobile" class="w-full p-6 hidden md:block">
+      <PowerBidashboard />
     </div>
   </div>
 </template>
 
 <script>
 import DataBlocks from '~/components/partials/DataBlocks.vue'
+import PowerBidashboard from '~/components/partials/PowerBidashboard.vue'
 
 export default {
   components: {
-    DataBlocks
+    DataBlocks,
+    PowerBidashboard
   },
   props: {
     donnees: {
       required: true,
       type: Object
+    }
+  },
+  computed: {
+    isMobile () {
+      if (process.client) {
+        return window.innerWidth <= 768
+      } else {
+        return true
+      }
     }
   },
   head () {
