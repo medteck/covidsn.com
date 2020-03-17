@@ -7,6 +7,7 @@
     <div class="footer-content">
       <Footer />
     </div>
+    <div class="elfsight-app-1461a5ec-2c8d-44e7-a030-96af0a041b80 visible lg:invisible"></div>
   </div>
 </template>
 
