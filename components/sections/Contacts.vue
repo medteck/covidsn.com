@@ -42,7 +42,7 @@ export default {
         {
           hid: 'title',
           name: 'title',
-          content: `COVID-19 Sénégal - Contacts d\'urgence`
+          content: 'COVID-19 Sénégal - Contacts d\'urgence'
         },
         {
           hid: 'description',
@@ -52,7 +52,7 @@ export default {
         {
           hid: 'og:title',
           property: 'og:title',
-          content: `COVID-19 Sénégal - Contacts d\'urgence`
+          content: 'COVID-19 Sénégal - Contacts d\'urgence'
         },
         {
           hid: 'og:description',
@@ -66,6 +66,9 @@ export default {
         }
       ]
     }
+  },
+  mounted () {
+    window.document.querySelector('body').scrollTo(0, 0)
   }
 }
 </script>

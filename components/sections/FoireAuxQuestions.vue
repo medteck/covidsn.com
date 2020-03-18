@@ -19,7 +19,9 @@
       >
         <hr>
         <br>
-        <h2 itemprop="name" class="text-left">{{ info.question }}</h2>
+        <h2 itemprop="name" class="text-left">
+          {{ info.question }}
+        </h2>
         <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
           <div itemprop="text" class="pt-4 text-gray-600 text-md" v-html="getHTML(info.reponse)" />
         </div>
@@ -57,7 +59,7 @@ export default {
         {
           hid: 'title',
           name: 'title',
-          content: `COVID-19 Sénégal - Foire aux questions`
+          content: 'COVID-19 Sénégal - Foire aux questions'
         },
         {
           hid: 'description',
@@ -67,7 +69,7 @@ export default {
         {
           hid: 'og:title',
           property: 'og:title',
-          content: `COVID-19 Sénégal - Foire aux questions`
+          content: 'COVID-19 Sénégal - Foire aux questions'
         },
         {
           hid: 'og:description',
@@ -81,6 +83,9 @@ export default {
         }
       ]
     }
+  },
+  mounted () {
+    window.document.querySelector('body').scrollTo(0, 0)
   }
 }
 </script>
