@@ -84,17 +84,17 @@ export default {
         },
         {
           hid: 'og:title',
-          name: 'og:title',
+          property: 'og:title',
           content: `COVID-19 Sénégal - À propos de nous`
         },
         {
           hid: 'og:description',
-          name: 'og:description',
+          property: 'og:description',
           content: this.apropos.sous_titre
         },
         {
           hid: 'og:url',
-          name: 'og:url',
+          property: 'og:url',
           content: 'https://covidsn.com/a-propos'
         }
       ]

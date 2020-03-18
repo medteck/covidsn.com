@@ -89,17 +89,17 @@ export default {
         },
         {
           hid: 'og:title',
-          name: 'og:title',
+          property: 'og:title',
           content: 'COVID-19 Sénégal - Communications gouvernementales'
         },
         {
           hid: 'og:description',
-          name: 'og:description',
+          property: 'og:description',
           content: 'Les différentes publications et communiqués du gouvernement du Sénégal, concernant le Corona Virus.'
         },
         {
           hid: 'og:url',
-          name: 'og:url',
+          property: 'og:url',
           content: 'https://covidsn.com/communications'
         }
       ]

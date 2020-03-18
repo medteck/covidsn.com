@@ -11,7 +11,7 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
       { name: 'google-site-verification', content: 'NLRQZNBwYaBC8sQNpIlW9NmG6Fc8ps5jTOeqoEwb2EE' },
       { hid: 'image', name: 'image', content: 'https://covidsn.com/logo-covidsn.png' },
-      { hid: 'og:image', name: 'og:image', content: 'https://covidsn.com/logo-covidsn.png' }
+      { hid: 'og:image', property: 'og:image', content: 'https://covidsn.com/logo-covidsn.png' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/logo-covidsn.png' },

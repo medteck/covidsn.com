@@ -66,17 +66,17 @@ export default {
         },
         {
           hid: 'og:title',
-          name: 'og:title',
+          property: 'og:title',
           content: `COVID-19 Sénégal - Foire aux questions`
         },
         {
           hid: 'og:description',
-          name: 'og:description',
+          property: 'og:description',
           content: 'Les questions les plus fréquentes concernant le Corona Virus au Sénégal.'
         },
         {
           hid: 'og:url',
-          name: 'og:url',
+          property: 'og:url',
           content: 'https://covidsn.com/foire-aux-questions'
         }
       ]
