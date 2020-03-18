@@ -10,8 +10,9 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
       { name: 'google-site-verification', content: 'NLRQZNBwYaBC8sQNpIlW9NmG6Fc8ps5jTOeqoEwb2EE' },
-      { hid: 'image', name: 'image', content: 'https://covidsn.com/logo-covidsn.png' },
-      { hid: 'og:image', property: 'og:image', content: 'https://covidsn.com/logo-covidsn.png' }
+      { hid: 'image', name: 'image', content: 'https://covidsn.com/logo-covidsn-512.png' },
+      { hid: 'og:image', property: 'og:image', content: 'https://covidsn.com/logo-covidsn-512.png' },
+      { hid: 'fb:app_id', property: 'fb:app_id', content: '199147181346528' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/logo-covidsn.png' },
