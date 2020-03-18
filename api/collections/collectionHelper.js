@@ -9,7 +9,7 @@ class CollectionHelper {
         document: communication.document
           ? {
             url: `https://directus.medteck.xyz/uploads/covidsn/originals/${communication.document.filename_disk}`,
-            type: communication.document.type,
+            type: communication.document.type === 'application/pdf' ? 'le document PDF' : 'l\'image',
             filesize: communication.document.filesize
           }
           : null,

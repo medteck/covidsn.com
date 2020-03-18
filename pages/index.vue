@@ -15,26 +15,26 @@ export default {
   components: {
     SectionViewer
   },
-  async asyncData ({ req, $axios }) {
+  async asyncData ({ req, $axios, route }) {
     let host = 'https://covidsn.com'
     if (process.env.NODE_ENV !== 'production') {
       host = 'http://localhost:3221'
     }
 
-    const accueil = await $axios.get(`${host}/api/pages/accueil`)
-    const communications = await $axios.get(`${host}/api/collections/communications`)
-    const donnees = await $axios.get(`${host}/api/pages/donnees`)
-    const apropos = await $axios.get(`${host}/api/pages/apropos`)
-    const faq = await $axios.get(`${host}/api/collections/faq`)
-    const contacts = await $axios.get(`${host}/api/collections/contacts`)
+    const accueil = route.path === '/' ? (await $axios.get(`${host}/api/pages/accueil`)).data : {}
+    const communications = route.path === '/communications' ? (await $axios.get(`${host}/api/collections/communications`)).data : []
+    const donnees = route.path === '/donnees' || route.path === '/' ? (await $axios.get(`${host}/api/pages/donnees`)).data : {}
+    const apropos = route.path === '/a-propos' ? (await $axios.get(`${host}/api/pages/apropos`)).data : {}
+    const faq = route.path === '/foire-aux-questions' ? (await $axios.get(`${host}/api/collections/faq`)).data : []
+    const contacts = route.path === '/contacts' ? (await $axios.get(`${host}/api/collections/contacts`)).data : []
 
     return {
-      accueil: accueil.data,
-      communications: communications.data,
-      donnees: donnees.data,
-      apropos: apropos.data,
-      faq: faq.data,
-      contacts: contacts.data
+      accueil,
+      communications,
+      donnees,
+      apropos,
+      faq,
+      contacts
     }
   }
 }

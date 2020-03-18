@@ -23,10 +23,7 @@ class CollectionsController {
       }
     ).then((result) => {
       const communications = CollectionHelper.convertCommunicationsForPublic(result.data)
-      res.send(JSON.stringify(communications))
-      // CollectionHelper.convertCommunicationsForPublic(result.data, req).then((communications) => {
-      //   res.send(JSON.stringify(communications))
-      // })
+      res.send(JSON.stringify(communications.reverse()))
     }).catch((error) => {
       res.status(500).send(util.inspect(error))
     })

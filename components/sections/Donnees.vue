@@ -8,12 +8,14 @@
         Ces données ont été mises à jour pour à la date suivante : <b class="text-black">{{ donnees.modified_on }}</b>
       </p>
     </div>
-    <div class="w-full p-6 mt-10 md:hidden">
-      <DataBlocks :donnees="donnees" :show-text="true" :show-updated="true"  />
-    </div>
-    <div v-if="!isMobile" class="w-full p-6 hidden md:block">
-      <PowerBiDashboard />
-    </div>
+    <client-only placeholder="Chargement...">
+      <div class="w-full p-6 mt-10 md:hidden">
+        <DataBlocks :donnees="donnees" :show-text="true" :show-updated="true"  />
+      </div>
+      <div v-if="!isMobile" class="w-full p-6 hidden md:block">
+        <PowerBiDashboard />
+      </div>
+    </client-only>
   </div>
 </template>
 
