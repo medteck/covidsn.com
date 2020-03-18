@@ -84,3 +84,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  ul {
+    list-style-type: disc;
+    padding-left: 12px;
+  }
+</style>
