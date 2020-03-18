@@ -36,6 +36,13 @@
       />
     </transition>
     <transition name="fade">
+      <FoireAuxQuestions
+        v-if="$route.path === sections.faq"
+        :faq="faq"
+        class="section"
+      />
+    </transition>
+    <transition name="fade">
       <Contacts
         v-if="$route.path === sections.contacts"
         :contacts="contacts"
@@ -51,6 +58,7 @@ import Communications from '~/components/sections/Communications.vue'
 import Donnees from '~/components/sections/Donnees.vue'
 import Multimedias from '~/components/sections/Multimedias.vue'
 import APropos from '~/components/sections/APropos.vue'
+import FoireAuxQuestions from '~/components/sections/FoireAuxQuestions.vue'
 import Contacts from '~/components/sections/Contacts.vue'
 
 export default {
@@ -60,6 +68,7 @@ export default {
     Donnees,
     Multimedias,
     APropos,
+    FoireAuxQuestions,
     Contacts
   },
   props: {
@@ -79,6 +88,10 @@ export default {
       required: true,
       type: Object
     },
+    faq: {
+      required: true,
+      type: Array
+    },
     contacts: {
       required: true,
       type: Array
@@ -94,6 +107,7 @@ export default {
         donnees: '/donnees',
         multimedias: '/multimedias',
         apropos: '/a-propos',
+        faq: '/foire-aux-questions',
         contacts: '/contacts'
       }
     }

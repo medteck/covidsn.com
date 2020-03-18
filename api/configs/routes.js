@@ -22,6 +22,10 @@ const getRoutes = () => {
       controller: CollectionsController.getCommunications
     },
     {
+      path: '/collections/faq',
+      controller: CollectionsController.getFAQ
+    },
+    {
       path: '/collections/contacts',
       controller: CollectionsController.getContacts
     }

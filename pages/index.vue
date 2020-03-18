@@ -4,6 +4,7 @@
     :communications="communications"
     :donnees="donnees"
     :apropos="apropos"
+    :faq="faq"
     :contacts="contacts"
   />
 </template>
@@ -24,6 +25,7 @@ export default {
     const communications = await $axios.get(`${host}/api/collections/communications`)
     const donnees = await $axios.get(`${host}/api/pages/donnees`)
     const apropos = await $axios.get(`${host}/api/pages/apropos`)
+    const faq = await $axios.get(`${host}/api/collections/faq`)
     const contacts = await $axios.get(`${host}/api/collections/contacts`)
 
     return {
@@ -31,13 +33,8 @@ export default {
       communications: communications.data,
       donnees: donnees.data,
       apropos: apropos.data,
+      faq: faq.data,
       contacts: contacts.data
-    }
-  },
-  data () {
-    return {
-      accueil: {},
-      communications: []
     }
   }
 }

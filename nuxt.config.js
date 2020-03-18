@@ -107,6 +107,7 @@ export default {
         '/donnees',
         '/multimedias',
         '/a-propos',
+        '/foire-aux-questions',
         '/contacts'
       ].forEach((path) => {
         routes.push({
@@ -122,6 +123,6 @@ export default {
   */
   server: {
     port: 3221,
-    host: '127.0.0.1'
+    host: '0.0.0.0'
   }
 }

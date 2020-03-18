@@ -1,0 +1,66 @@
+<template>
+  <div class="p-4 section-wrapper">
+    <div class="my-6 px-4">
+      <h1 class="text-left font-bold md:font-light">
+        Foire aux questions
+      </h1>
+      <p class="mt-4 text-gray-600 text-lg">
+        Les questions les plus fréquentes concernant le Corona Virus au Sénégal. <br>
+      </p>
+    </div>
+    <div class="flex flex-wrap">
+      <div
+        v-for="info in faq"
+        :key="info.id"
+        itemscope
+        itemprop="mainEntity"
+        itemtype="https://schema.org/Question"
+        class="w-full lg:w-3/4 xl:pt-6 pl-6"
+      >
+        <hr>
+        <br>
+        <h2 itemprop="name" class="text-left">{{ info.question }}</h2>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text" class="pt-4 text-gray-600 text-md" v-html="getHTML(info.reponse)" />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import marked from 'marked'
+
+export default {
+  props: {
+    faq: {
+      required: true,
+      type: Array
+    }
+  },
+  data () {
+    return {
+      timelineOptions: {
+        tweetLimit: 3
+      }
+    }
+  },
+  methods: {
+    getHTML (markdown) {
+      return marked(markdown)
+    }
+  },
+  head () {
+    return {
+      title: 'COVID-19 Sénégal - Foire aux questions',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Les questions les plus fréquentes concernant le Corona Virus au Sénégal.'
+        }
+      ]
+    }
+  }
+}
+</script>

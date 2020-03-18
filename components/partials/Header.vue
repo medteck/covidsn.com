@@ -79,6 +79,10 @@ export default {
           path: '/a-propos'
         },
         {
+          title: 'Foire aux questions',
+          path: '/foire-aux-questions'
+        },
+        {
           title: 'Contacts d\'urgence',
           path: '/contacts'
         }

@@ -43,6 +43,26 @@ class CollectionsController {
       res.status(500).send(util.inspect(error))
     })
   }
+
+  static getFAQ (req, res, directusClient) {
+    directusClient.getItems(
+      'foire_aux_questions',
+      {
+        filter: {
+          status: 'published'
+        },
+        fields: [
+          'id',
+          'question',
+          'reponse'
+        ]
+      }
+    ).then((result) => {
+      res.send(JSON.stringify(result.data))
+    }).catch((error) => {
+      res.status(500).send(util.inspect(error))
+    })
+  }
 }
 
 export default CollectionsController
