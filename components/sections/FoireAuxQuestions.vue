@@ -55,9 +55,29 @@ export default {
       title: 'COVID-19 Sénégal - Foire aux questions',
       meta: [
         {
+          hid: 'title',
+          name: 'title',
+          content: `COVID-19 Sénégal - Foire aux questions`
+        },
+        {
           hid: 'description',
           name: 'description',
           content: 'Les questions les plus fréquentes concernant le Corona Virus au Sénégal.'
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: `COVID-19 Sénégal - Foire aux questions`
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: 'Les questions les plus fréquentes concernant le Corona Virus au Sénégal.'
+        },
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          content: 'https://covidsn.com/foire-aux-questions'
         }
       ]
     }

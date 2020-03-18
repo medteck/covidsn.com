@@ -73,9 +73,29 @@ export default {
       title: 'COVID-19 Sénégal - À propos de nous',
       meta: [
         {
+          hid: 'title',
+          name: 'title',
+          content: `COVID-19 Sénégal - À propos de nous`
+        },
+        {
           hid: 'description',
           name: 'description',
-          content: 'Nous sommes un groupe d\'acteurs dans les domaines de la santé et du digital au Sénégal.'
+          content: this.apropos.sous_titre
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: `COVID-19 Sénégal - À propos de nous`
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.apropos.sous_titre
+        },
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          content: 'https://covidsn.com/a-propos'
         }
       ]
     }

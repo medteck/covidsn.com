@@ -40,9 +40,29 @@ export default {
       title: 'Contacts d\'urgence',
       meta: [
         {
+          hid: 'title',
+          name: 'title',
+          content: `COVID-19 Sénégal - Contacts d\'urgence`
+        },
+        {
           hid: 'description',
           name: 'description',
           content: 'Voici les numéros de téléphone à appeler en cas d\'urgence concernant le Corona Virus.'
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: `COVID-19 Sénégal - Contacts d\'urgence`
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: 'Voici les numéros de téléphone à appeler en cas d\'urgence concernant le Corona Virus.'
+        },
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          content: 'https://covidsn.com/contacts'
         }
       ]
     }

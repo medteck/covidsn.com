@@ -31,12 +31,32 @@ export default {
   },
   head () {
     return {
-      title: 'COVID-19 Sénégal',
+      title: `COVID-19 Sénégal - ${this.accueil.titre}`,
       meta: [
+        {
+          hid: 'title',
+          name: 'title',
+          content: `COVID-19 Sénégal - ${this.accueil.titre}`
+        },
         {
           hid: 'description',
           name: 'description',
-          content: 'Nous partageons les informations importantes sur le Corona Virus au Sénégal.'
+          content: this.accueil.sous_titre
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: `COVID-19 Sénégal - ${this.accueil.titre}`
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.accueil.sous_titre
+        },
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          content: 'https://covidsn.com'
         }
       ]
     }

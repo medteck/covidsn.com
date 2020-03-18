@@ -9,7 +9,9 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
-      { name: 'google-site-verification', content: 'NLRQZNBwYaBC8sQNpIlW9NmG6Fc8ps5jTOeqoEwb2EE' }
+      { name: 'google-site-verification', content: 'NLRQZNBwYaBC8sQNpIlW9NmG6Fc8ps5jTOeqoEwb2EE' },
+      { hid: 'og:image', name: 'image', content: 'https://covidsn.com/img/logo.svg' },
+      { hid: 'og:image', name: 'og:image', content: 'https://covidsn.com/img/logo.svg' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/logo-covidsn.png' },

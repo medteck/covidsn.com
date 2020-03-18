@@ -48,9 +48,29 @@ export default {
       title: 'COVID-19 Sénégal - Données statiques',
       meta: [
         {
+          hid: 'title',
+          name: 'title',
+          content: 'COVID-19 Sénégal - Données statiques'
+        },
+        {
           hid: 'description',
           name: 'description',
           content: 'Données statiques du COVID-19 sur le territoire national sénégalais'
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: 'COVID-19 Sénégal - Données statiques'
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: 'Données statiques du COVID-19 sur le territoire national sénégalais'
+        },
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          content: 'https://covidsn.com/donnees'
         }
       ]
     }

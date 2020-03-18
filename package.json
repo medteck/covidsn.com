@@ -1,7 +1,7 @@
 {
   "name": "covidsn.com",
   "version": "1.0.0",
-  "description": "Informations essentielles sur le Corona Virus au Sénégal",
+  "description": "Les informations sûres et en temps réel sur le Corona Virus au Sénégal",
   "author": "Medteck",
   "private": true,
   "scripts": {
