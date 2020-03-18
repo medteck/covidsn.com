@@ -31,12 +31,12 @@ export default {
   },
   head () {
     return {
-      title: `COVID-19 Sénégal - ${this.accueil.titre}`,
+      title: ${this.accueil.titre},
       meta: [
         {
           hid: 'title',
           name: 'title',
-          content: `COVID-19 Sénégal - ${this.accueil.titre}`
+          content: ${this.accueil.titre}
         },
         {
           hid: 'description',
@@ -46,7 +46,7 @@ export default {
         {
           hid: 'og:title',
           name: 'og:title',
-          content: `COVID-19 Sénégal - ${this.accueil.titre}`
+          content: ${this.accueil.titre}
         },
         {
           hid: 'og:description',
