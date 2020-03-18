@@ -114,12 +114,11 @@ export default {
   },
   watch: {
     $route (to) {
-      if (Object.values(this.sections).find(value => value === to.hash)) {
-        this.currentSection = to.hash
+      this.visible = false
+      location.reload()
+      setTimeout(() => {
         this.visible = true
-      } else {
-        location.hash = ''
-      }
+      }, 500)
     }
   },
   mounted () {

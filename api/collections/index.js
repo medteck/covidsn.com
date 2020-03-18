@@ -1,4 +1,5 @@
 import util from 'util'
+import CollectionHelper from './collectionHelper'
 
 class CollectionsController {
   static getCommunications (req, res, directusClient) {
@@ -13,12 +14,19 @@ class CollectionsController {
           'titre',
           'description',
           'sort',
+          'document.filename_disk',
+          'document.type',
+          'document.filesize',
           'created_on',
           'modified_on'
         ]
       }
     ).then((result) => {
-      res.send(JSON.stringify(result.data))
+      const communications = CollectionHelper.convertCommunicationsForPublic(result.data)
+      res.send(JSON.stringify(communications))
+      // CollectionHelper.convertCommunicationsForPublic(result.data, req).then((communications) => {
+      //   res.send(JSON.stringify(communications))
+      // })
     }).catch((error) => {
       res.status(500).send(util.inspect(error))
     })

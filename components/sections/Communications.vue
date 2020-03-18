@@ -10,12 +10,15 @@
     </div>
     <div class="flex flex-wrap">
       <div class="w-full lg:w-2/3 lg:pr-12 lg:pt-6">
-        <article v-for="communication in communications" :key="communication.id" class="py-8 pl-8">
+        <article v-for="communication in communications.reverse()" :key="communication.id" class="py-8 pl-8">
           <hr class="py-6">
           <h2 class="text-left font-bold md:font-light mb-4">
             {{ communication.titre }}
           </h2>
-          <p class="mt-4 py-4 text-gray-700" v-html="getHTML(communication.description)" />
+          <p v-if="communication.description" class="mt-4 py-4 text-gray-700" v-html="getHTML(communication.description)" />
+          <a v-if="hasFile(communication)" :href="communication.document.url" target="_blank" class="text-green underline">
+            Voir {{ getFileType(communication) }} ({{ getFilesize(communication.document) }})
+          </a>
         </article>
       </div>
       <div id="twitter-feed-container" class="w-full lg:w-1/3 lg:pl-8">
@@ -53,6 +56,19 @@ export default {
   methods: {
     getHTML (markdown) {
       return marked(markdown)
+    },
+    getFilesize (document) {
+      return `${document.filesize / 1000} Ko`
+    },
+    getFileType (communication) {
+      if (communication.document.type === 'application/pdf') {
+        return 'le document PDF'
+      } else {
+        return 'l\'image'
+      }
+    },
+    hasFile (communication) {
+      return communication.document != null
     }
   },
   head () {
