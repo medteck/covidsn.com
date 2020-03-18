@@ -2,13 +2,18 @@
   <div class="flex items-center text-xs h-auto">
     <div class="flex flex-auto p-4 font-medium link">
       <div class="flex-initial px-2">
-        <a href="https://www.facebook.com/" target="_blank">
+        <a href="https://www.facebook.com/covidsn" target="_blank">
           <img src="/img/icons/facebook.svg" class="w-12 lg:w-8">
         </a>
       </div>
       <div class="flex-initial px-2">
-        <a href="https://www.twitter.com/" target="_blank">
+        <a href="https://twitter.com/covidsn" target="_blank">
           <img src="/img/icons/twitter.svg" class="w-12 lg:w-8">
+        </a>
+      </div>
+      <div class="flex-initial px-2">
+        <a href="https://instagram.com/covidsn" target="_blank">
+          <img src="/img/icons/instagram.svg" class="w-12 lg:w-8">
         </a>
       </div>
     </div>
