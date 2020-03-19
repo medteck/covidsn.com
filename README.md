@@ -13,7 +13,7 @@ You need to have installed:
 - [redis](https://redis.io/): Redis
 
 
-To start the project, you nedd to run this commands:
+To start the project, you nedd to run this command before:
 
 ``` bash
 
@@ -30,7 +30,7 @@ redis-cli
 ```
 
 
-Then !
+Then go inside the project !
 
 ``` bash
 # install dependencies
