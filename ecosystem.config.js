@@ -3,7 +3,10 @@ module.exports = {
     {
       name: 'covidsn',
       script: 'nuxt',
-      args: 'start'
+      args: 'start',
+      env_production: {
+        GA_COVIDSN: 'UA-161185000-1'
+      }
     }
   ]
 }
