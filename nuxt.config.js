@@ -37,6 +37,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~plugins/ga.js', mode: 'client' }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -96,7 +97,7 @@ export default {
   ** Google Analytics configuration
   */
   googleAnalytics: {
-    id: process.env.GA_COVIDSN
+    id: 'UA-161185000-1'
   },
   /*
   ** Build configuration
