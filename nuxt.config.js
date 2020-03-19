@@ -45,7 +45,9 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    // Doc: https://github.com/nuxt-community/analytics-module
+    '@nuxtjs/google-analytics'
   ],
   /*
   ** Nuxt.js modules
@@ -89,6 +91,12 @@ export default {
       iconSrc: 'https://covidsn.com/img/senegal-emergent.png',
       iconFileName: 'COVID-19 Senegal'
     }
+  },
+  /*
+  ** Google Analytics configuration
+  */
+  googleAnalytics: {
+    id: process.env.GA_COVIDSN
   },
   /*
   ** Build configuration
