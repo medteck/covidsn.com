@@ -19,8 +19,7 @@ export default {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:200,300,500,600&display=swap' }
     ],
     script: [
-      { src: 'https://platform.twitter.com/widgets.js' },
-      { src: 'https://apps.elfsight.com/p/platform.js', defer: true }
+      { src: 'https://platform.twitter.com/widgets.js' }
     ]
   },
   /*
@@ -89,7 +88,7 @@ export default {
       lang: 'fr'
     },
     icon: {
-      iconSrc: 'https://covidsn.com/img/senegal-emergent.png',
+      iconSrc: 'https://covidsn.com/logo-covidsn-512.png',
       iconFileName: 'COVID-19 Senegal'
     }
   },
