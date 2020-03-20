@@ -6,7 +6,7 @@
       </div>
       <div class="flex-none h-auto p-4 hidden font-semibold lg:inline-flex justify-end">
         <span v-for="navlink in navlinks" :key="navlink.title">
-          <nuxt-link :to="navlink.path" class="link mx-5">
+          <nuxt-link :to="navlink.path" class="link mx-3 xl:mx-4">
             {{ navlink.title }}
           </nuxt-link>
         </span>
@@ -63,6 +63,10 @@ export default {
           path: '/'
         },
         {
+          title: 'Fake News',
+          path: '/fake-news'
+        },
+        {
           title: 'Communications gouvernementales',
           path: '/communications'
         },
@@ -75,12 +79,12 @@ export default {
         //   path: '/multimedias'
         // },
         {
-          title: 'À propos',
-          path: '/a-propos'
-        },
-        {
           title: 'Foire aux questions',
           path: '/foire-aux-questions'
+        },
+        {
+          title: 'À propos',
+          path: '/a-propos'
         },
         {
           title: 'Contacts d\'urgence',

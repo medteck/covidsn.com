@@ -28,6 +28,10 @@ const getRoutes = () => {
     {
       path: '/collections/contacts',
       controller: CollectionsController.getContacts
+    },
+    {
+      path: '/collections/fakenews',
+      controller: CollectionsController.getFakeNews
     }
   ]
 }

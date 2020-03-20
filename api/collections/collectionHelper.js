@@ -18,6 +18,25 @@ class CollectionHelper {
       }
     })
   }
+
+  static convertFakeNewsForPublic (fakeNews) {
+    return fakeNews.map((fakeNew) => {
+      return {
+        id: fakeNew.id,
+        titre: fakeNew.titre,
+        sous_titre: fakeNew.sous_titre,
+        contenu: fakeNew.contenu,
+        slug: fakeNew.slug,
+        source: fakeNew.source,
+        show_details: false,
+        image: fakeNew.image
+          ? `https://directus.medteck.xyz/covidsn/assets/${fakeNew.image.private_hash}?w=400&h=250&f=crop&q=80`
+          : null,
+        created_on: fakeNew.created_on,
+        modified_on: fakeNew.modified_on
+      }
+    })
+  }
 }
 
 export default CollectionHelper

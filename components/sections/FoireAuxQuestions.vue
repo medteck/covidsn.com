@@ -8,7 +8,7 @@
         Les questions les plus fréquentes concernant le Corona Virus au Sénégal. <br>
       </p>
     </div>
-    <div class="flex flex-wrap">
+    <div class="flex flex-wrap mb-12">
       <div
         v-for="info in faq"
         :key="info.id"
@@ -38,13 +38,6 @@ export default {
     faq: {
       required: true,
       type: Array
-    }
-  },
-  data () {
-    return {
-      timelineOptions: {
-        tweetLimit: 3
-      }
     }
   },
   methods: {

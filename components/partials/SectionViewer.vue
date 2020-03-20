@@ -2,7 +2,7 @@
   <div :class="visible ? 'visible': ''" id="section-container" class="section-container lg:px-10 pt-24 lg:pt-0">
     <transition name="fade">
       <Accueil
-        v-if="$route.path === sections.accueil"
+        v-if="!$route.path || $route.path === sections.accueil"
         :accueil="accueil"
         :donnees="donnees"
         class="section"
@@ -43,6 +43,13 @@
       />
     </transition>
     <transition name="fade">
+      <FakeNews
+        v-if="$route.path === sections.fakenews"
+        :fakenews="fakenews"
+        class="section"
+      />
+    </transition>
+    <transition name="fade">
       <Contacts
         v-if="$route.path === sections.contacts"
         :contacts="contacts"
@@ -59,6 +66,7 @@ import Donnees from '~/components/sections/Donnees.vue'
 import Multimedias from '~/components/sections/Multimedias.vue'
 import APropos from '~/components/sections/APropos.vue'
 import FoireAuxQuestions from '~/components/sections/FoireAuxQuestions.vue'
+import FakeNews from '~/components/sections/FakeNews.vue'
 import Contacts from '~/components/sections/Contacts.vue'
 
 export default {
@@ -69,6 +77,7 @@ export default {
     Multimedias,
     APropos,
     FoireAuxQuestions,
+    FakeNews,
     Contacts
   },
   props: {
@@ -92,6 +101,10 @@ export default {
       required: true,
       type: Array
     },
+    fakenews: {
+      required: true,
+      type: Array
+    },
     contacts: {
       required: true,
       type: Array
@@ -108,6 +121,7 @@ export default {
         multimedias: '/multimedias',
         apropos: '/a-propos',
         faq: '/foire-aux-questions',
+        fakenews: '/fake-news',
         contacts: '/contacts'
       }
     }

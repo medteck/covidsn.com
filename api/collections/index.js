@@ -68,6 +68,33 @@ class CollectionsController {
       res.status(500).send(util.inspect(error))
     })
   }
+
+  static getFakeNews (req, res, directusClient) {
+    directusClient.getItems(
+      'fake_news',
+      {
+        filter: {
+          status: 'published'
+        },
+        fields: [
+          'id',
+          'titre',
+          'image.private_hash',
+          'sous_titre',
+          'contenu',
+          'slug',
+          'source',
+          'created_on',
+          'modified_on'
+        ]
+      }
+    ).then((result) => {
+      const fakeNews = CollectionHelper.convertFakeNewsForPublic(result.data)
+      res.send(JSON.stringify(fakeNews.reverse()))
+    }).catch((error) => {
+      res.status(500).send(util.inspect(error))
+    })
+  }
 }
 
 export default CollectionsController

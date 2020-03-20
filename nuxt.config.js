@@ -120,6 +120,7 @@ export default {
         '/multimedias',
         '/a-propos',
         '/foire-aux-questions',
+        '/fake-news',
         '/contacts'
       ].forEach((path) => {
         routes.push({
