@@ -3,9 +3,7 @@ module.exports = {
     {
       name: 'covidsn',
       script: 'nuxt',
-      args: 'start',
-      instances: 'max',
-      exec_mode: 'cluster'
+      args: 'start'
     }
   ]
 }
