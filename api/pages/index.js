@@ -69,9 +69,7 @@ class PagesController {
     ).then((result) => {
       const pages = result.data
       if (pages.length) {
-        PageHelper.convertForPublic(pages[0], req).then((page) => {
-          res.send(JSON.stringify(page))
-        })
+        res.send(JSON.stringify(PageHelper.convertForPublic(pages[0])))
       } else {
         res.status(404).send()
       }

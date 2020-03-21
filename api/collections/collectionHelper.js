@@ -8,7 +8,7 @@ class CollectionHelper {
         sort: communication.sort,
         document: communication.document
           ? {
-            url: `https://directus.medteck.xyz/uploads/covidsn/originals/${communication.document.filename_disk}`,
+            url: `https://cdn.covidsn.com/uploads/covidsn/originals/${communication.document.filename_disk}`,
             type: communication.document.type === 'application/pdf' ? 'le document PDF' : 'l\'image',
             filesize: communication.document.filesize
           }
@@ -28,6 +28,7 @@ class CollectionHelper {
         contenu: fakeNew.contenu,
         slug: fakeNew.slug,
         source: fakeNew.source,
+        video: fakeNew.video,
         show_details: false,
         image: fakeNew.image
           ? `https://directus.medteck.xyz/covidsn/assets/${fakeNew.image.private_hash}?w=400&h=250&f=crop&q=80`
