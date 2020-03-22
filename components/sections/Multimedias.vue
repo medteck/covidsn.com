@@ -7,6 +7,30 @@
     </div>
     <div class="flex flex-wrap">
       <div class="w-full lg:w-2/3 lg:pr-12 lg:pt-6">
+        <div class="flex flex-wrap justify-center">
+          <div class="w-56 h-56 p-2">
+            <img class="object-cover  w-full" src="https://images.unsplash.com/photo-1493119508027-2b584f234d6c" alt="image">
+          </div>
+          <div class="w-56 h-56 p-2 video-container">
+            <video controls>
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="w-56 h-56 p-2">
+            <img class="object-cover w-full" src="https://images.unsplash.com/photo-1493119508027-2b584f234d6c" alt="image">
+          </div>
+          <div class="w-56 h-56 p-2 video-container">
+            <video controls>
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="w-56 h-56 p-2">
+            <img class="object-cover  w-full" src="https://images.unsplash.com/photo-1493119508027-2b584f234d6c" alt="image">
+          </div>
+          <div class="w-56 h-56 p-2">
+            <img class="object-cover  w-full" src="https://images.unsplash.com/photo-1493119508027-2b584f234d6c" alt="image">
+          </div>
+        </div>
       </div>
       <div id="twitter-feed-container" class="w-full lg:w-1/3 lg:pl-8">
         <client-only placeholder="Chargement...">
