@@ -27,7 +27,7 @@ export default {
     const donnees = route.path === '/donnees' || route.path === '/' ? (await $axios.get(`${host}/api/pages/donnees`)).data : {}
     const apropos = route.path === '/a-propos' ? (await $axios.get(`${host}/api/pages/apropos`)).data : {}
     const faq = route.path === '/foire-aux-questions' ? (await $axios.get(`${host}/api/collections/faq`)).data : []
-    const fakenews = route.path === '/fake-news' ? (await $axios.get(`${host}/api/collections/fakenews`)).data : []
+    const fakenews = route.path.search('/fake-news') !== -1 ? (await $axios.get(`${host}/api/collections/fakenews`)).data : []
     const contacts = route.path === '/contacts' ? (await $axios.get(`${host}/api/collections/contacts`)).data : []
 
     return {

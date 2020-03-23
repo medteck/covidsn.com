@@ -44,7 +44,7 @@
     </transition>
     <transition name="fade">
       <FakeNews
-        v-if="$route.path === sections.fakenews"
+        v-if="$route.path.search(sections.fakenews) !== -1"
         :fakenews="fakenews"
         class="section"
       />

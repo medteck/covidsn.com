@@ -117,6 +117,7 @@ export default {
         '/a-propos',
         '/foire-aux-questions',
         '/fake-news',
+        '/fake-news/:slug',
         '/contacts'
       ].forEach((path) => {
         routes.push({

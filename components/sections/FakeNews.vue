@@ -110,15 +110,16 @@ export default {
   },
   mounted () {
     window.document.querySelector('body').scrollTo(0, 0)
-    if (location.hash) {
-      const fakenew = this.fakenews.find(fn => `#${fn.slug}` === location.hash)
+    console.log(this.$route.params.slug)
+    if (this.$route.params.slug) {
+      const fakenew = this.fakenews.find(fn => fn.slug === this.$route.params.slug)
       if (typeof fakenew !== 'undefined') {
         this.selectedFakeNew = fakenew
         this.toggleDetails(fakenew)
         this.$nextTick(() => {
           window.document.querySelector('body').scrollTo({
             behavior: 'smooth',
-            top: document.querySelector(location.hash).getBoundingClientRect().top - 110
+            top: document.querySelector(`#${this.$route.params.slug}`).getBoundingClientRect().top - 110
           })
         })
       }
@@ -129,7 +130,7 @@ export default {
       fakenew.show_details = !fakenew.show_details
     },
     getSharingLink (fakenew) {
-      return `https://covidsn.com/fake-news#${fakenew.slug}`
+      return `https://covidsn.com/fake-news/${fakenew.slug}`
     },
     copySharingLink (fakenew) {
       this.$copyText(this.getSharingLink(fakenew))
