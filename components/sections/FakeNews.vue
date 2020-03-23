@@ -31,7 +31,7 @@
           </div>
           <transition name="fade">
             <div v-if="fakenew.show_details" class="px-4 lg:px-8">
-              <img v-if="!fakenew.video" :src="fakenew.image" :alt="fakenew.titre" class="mt-6 rounded w-full md:w-1/2">
+              <img v-if="!fakenew.video && fakenew.image" :src="fakenew.image" :alt="fakenew.titre" class="mt-6 rounded w-full md:w-1/2">
               <iframe
                 v-if="fakenew.video"
                 :src="`https://www.youtube.com/embed/${fakenew.video}`"
@@ -48,7 +48,7 @@
           </transition>
           <div class="pt-4 text-lg">
             <button
-              v-if="(fakenew.contenu || fakenew.video || fakenew.image) && !fakenew.show_details"
+              v-if="!fakenew.show_details"
               class="text-green underline"
               @click="toggleDetails(fakenew)"
             >
