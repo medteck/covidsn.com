@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 export default {
   mode: 'universal',
   /*
@@ -49,6 +51,18 @@ export default {
     // Doc: https://github.com/nuxt-community/analytics-module
     '@nuxtjs/google-analytics'
   ],
+  generate: {
+    routes () {
+      return axios.get('http://localhost:3221/api/collections/fakenews').then((res) => {
+        return res.data.map((fn) => {
+          return {
+            route: `/fake-news/${fn.slug}`,
+            payload: fn
+          }
+        })
+      })
+    }
+  },
   /*
   ** Nuxt.js modules
   */
