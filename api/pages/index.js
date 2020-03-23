@@ -8,7 +8,8 @@ class PagesController {
       {
         fields: [
           'titre',
-          'sous_titre'
+          'sous_titre',
+          'video'
         ]
       }
     ).then((result) => {

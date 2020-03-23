@@ -1,5 +1,5 @@
 <template>
-  <div class="section-wrapper flex relative p-4 py-12 lg:py-0">
+  <div class="section-wrapper flex relative p-4 my-12 lg:py-0">
     <div class="m-auto px-10">
       <h1 class="shadow">
         {{ accueil.titre }}
@@ -7,6 +7,15 @@
       <h2>
         {{ accueil.sous_titre }}
       </h2>
+      <div v-if="accueil.video" class="mt-8 my-12">
+        <iframe
+          :src="`https://www.youtube.com/embed/${accueil.video}`"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          class="mx-auto mt-6 rounded w-full md:w-1/2 h-48 sm:h-64 xl:h-128"
+          allowfullscreen
+        />
+      </div>
       <DataBlocks :donnees="donnees" :show-text="false" :show-updated="true" class="mt-8" />
     </div>
   </div>
