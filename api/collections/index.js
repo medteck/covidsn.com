@@ -84,6 +84,7 @@ class CollectionsController {
           'contenu',
           'slug',
           'source',
+          'video',
           'created_on',
           'modified_on'
         ]

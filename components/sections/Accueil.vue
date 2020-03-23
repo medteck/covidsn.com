@@ -29,6 +29,9 @@ export default {
       type: Object
     }
   },
+  mounted () {
+    window.document.querySelector('body').scrollTo(0, 0)
+  },
   head () {
     return {
       title: this.accueil.titre,
@@ -60,9 +63,6 @@ export default {
         }
       ]
     }
-  },
-  mounted () {
-    window.document.querySelector('body').scrollTo(0, 0)
   }
 }
 </script>

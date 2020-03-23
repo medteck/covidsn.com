@@ -14,12 +14,13 @@
   "dependencies": {
     "@directus/sdk-js": "^6.0.5",
     "@nuxtjs/axios": "^5.3.6",
-    "@nuxtjs/pwa": "^3.0.0-0",
     "@nuxtjs/google-analytics": "^2.2.3",
+    "@nuxtjs/pwa": "^3.0.0-0",
     "less": "^3.11.1",
     "less-loader": "^5.0.0",
     "marked": "^0.8.0",
     "nuxt": "^2.0.0",
+    "nuxt-clipboard2": "^0.2.1",
     "redis": "^3.0.2",
     "typescript": "^3.8.3",
     "vue-tweet-embed": "^2.4.0"

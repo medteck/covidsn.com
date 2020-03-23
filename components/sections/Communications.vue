@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <div class="p-4 section-wrapper">
     <div class="my-6 px-4">
@@ -11,11 +12,11 @@
     <div class="flex flex-wrap">
       <div class="w-full lg:w-2/3 lg:pr-12 lg:pt-6">
         <article v-for="communication in communications" :key="communication.id" class="py-8 pl-8">
-          <hr class="py-6" />
+          <hr class="py-6">
           <h2 class="text-left font-bold md:font-light mb-4">
             {{ communication.titre }}
           </h2>
-          <p v-show="communication.description" class="mt-4 py-4 text-gray-700" v-html="getHTML(communication.description)"></p>
+          <p v-show="communication.description" class="mt-4 py-4 text-gray-700" v-html="getHTML(communication.description)" />
           <a v-if="hasFile(communication)" :href="communication.document.url" target="_blank" class="text-green underline">
             Voir {{ getFileType(communication) }} ({{ getFilesize(communication.document) }})
           </a>
@@ -54,6 +55,9 @@ export default {
         tweetLimit: 3
       }
     }
+  },
+  mounted () {
+    window.document.querySelector('body').scrollTo(0, 0)
   },
   methods: {
     getHTML (markdown) {
@@ -104,9 +108,6 @@ export default {
         }
       ]
     }
-  },
-  mounted () {
-    window.document.querySelector('body').scrollTo(0, 0)
   }
 }
 </script>

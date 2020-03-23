@@ -29,11 +29,6 @@ export default {
       return this.windowWidth <= 768
     }
   },
-  methods: {
-    getWindowWidth () {
-      this.windowWidth = document.documentElement.clientWidth
-    }
-  },
   mounted () {
     window.addEventListener('resize', this.getWindowWidth)
     // Init
@@ -41,6 +36,11 @@ export default {
   },
   beforeDestroy () {
     window.removeEventListener('resize', this.getWindowWidth)
+  },
+  methods: {
+    getWindowWidth () {
+      this.windowWidth = document.documentElement.clientWidth
+    }
   }
 }
 </script>

@@ -35,6 +35,9 @@ export default {
       type: Array
     }
   },
+  mounted () {
+    window.document.querySelector('body').scrollTo(0, 0)
+  },
   head () {
     return {
       title: 'Contacts d\'urgence',
@@ -66,9 +69,6 @@ export default {
         }
       ]
     }
-  },
-  mounted () {
-    window.document.querySelector('body').scrollTo(0, 0)
   }
 }
 </script>

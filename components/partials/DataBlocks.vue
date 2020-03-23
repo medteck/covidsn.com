@@ -64,7 +64,7 @@
       </div>
     </div>
 
-    <div class="w-full text-sm text-gray-600 text-right px-4" v-if="showUpdated">
+    <div v-if="showUpdated" class="w-full text-sm text-gray-600 text-right px-4">
       Dernière mise à jour: {{ donnees.modified_on }}
     </div>
   </div>

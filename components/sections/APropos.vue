@@ -68,6 +68,9 @@ export default {
       type: Object
     }
   },
+  mounted () {
+    window.document.querySelector('body').scrollTo(0, 0)
+  },
   head () {
     return {
       title: 'COVID-19 Sénégal - À propos de nous',
@@ -99,9 +102,6 @@ export default {
         }
       ]
     }
-  },
-  mounted () {
-    window.document.querySelector('body').scrollTo(0, 0)
   }
 }
 </script>

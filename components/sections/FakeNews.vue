@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <div class="p-4 section-wrapper">
     <div class="my-6 px-4">
@@ -11,11 +12,13 @@
     <div class="flex flex-wrap mb-12">
       <div
         v-for="fakenew in fakenews"
-        :key="fakenew.id"
+        :id="fakenew.slug"
+        :key="fakenew.slug"
         itemscope
         itemprop="mainEntity"
         itemtype="https://schema.org/Question"
-        class="w-full xl:w-3/4 xl:pt-6 pl-6"
+        class="w-full xl:w-3/4 py-6 my-2 px-6"
+        :class="fakenew.show_details ? 'bg-gray-100 rounded-lg' : ''"
       >
         <hr>
         <br>
@@ -28,8 +31,16 @@
           </div>
           <transition name="fade">
             <div v-if="fakenew.show_details" class="px-4 lg:px-8">
-              <img :src="fakenew.image" :alt="fakenew.titre" class="mt-6 rounded w-full md:w-1/2">
-              <div v-html="fakenew.contenu" class="pt-6 text-gray-700 text-lg fakenews-contenu" />
+              <img v-if="!fakenew.video" :src="fakenew.image" :alt="fakenew.titre" class="mt-6 rounded w-full md:w-1/2">
+              <iframe
+                v-if="fakenew.video"
+                :src="`https://www.youtube.com/embed/${fakenew.video}`"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                class="mt-6 rounded w-full md:w-1/2 h-48 sm:h-64 xl:h-128"
+                allowfullscreen
+              />
+              <div class="pt-6 text-gray-700 text-lg fakenews-contenu" v-html="fakenew.contenu" />
               <div class="pt-4 text-sm">
                 Source: <a :href="fakenew.source" target="_blank" class="text-gray-700">{{ fakenew.source }}</a>
               </div>
@@ -37,21 +48,31 @@
           </transition>
           <div class="pt-4 text-lg">
             <button
-              v-if="fakenew.contenu && !fakenew.show_details"
-              @click="toggleDetails(fakenew)"
-              target="_blank"
+              v-if="(fakenew.contenu || fakenew.video || fakenew.image) && !fakenew.show_details"
               class="text-green underline"
+              @click="toggleDetails(fakenew)"
             >
-              Plus de détails
+              Plus de détails <span class="underline hidden md:inline-block">{{ fakenew.video ? '(Vidéo)' : (fakenew.image ? '(Image)' : '') }}</span>
             </button>
             <button
-              v-if="fakenew.contenu && fakenew.show_details"
-              @click="toggleDetails(fakenew)"
-              target="_blank"
+              v-if="fakenew.show_details"
               class="text-green underline"
+              @click="toggleDetails(fakenew)"
             >
               Cacher les détails
             </button>
+            <span class="px-2 md:px-4">|</span>
+            <button
+              v-if="!fakenew.copiedToClipboard"
+              target="_blank"
+              :class="fakenew.copiedToClipboard ? '' : 'text-green underline'"
+              @click="copySharingLink(fakenew)"
+            >
+              Copier le lien
+            </button>
+            <span v-if="fakenew.copiedToClipboard">
+              Lien copié <span class="hidden md:inline-block">dans le presse-papier</span>
+            </span>
           </div>
         </div>
       </div>
@@ -67,45 +88,85 @@ export default {
       type: Array
     }
   },
-  head () {
+  data () {
     return {
-      title: 'COVID-19 Sénégal - Fake News',
-      meta: [
-        {
-          hid: 'title',
-          name: 'title',
-          content: 'COVID-19 Sénégal - Fake News'
-        },
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'Toutes les fausses informations qui circulent à propos du corona virus au Sénégal.'
-        },
-        {
-          hid: 'og:title',
-          property: 'og:title',
-          content: 'COVID-19 Sénégal - Fake News'
-        },
-        {
-          hid: 'og:description',
-          property: 'og:description',
-          content: 'Toutes les fausses informations qui circulent à propos du corona virus au Sénégal.'
-        },
-        {
-          hid: 'og:url',
-          property: 'og:url',
-          content: 'https://covidsn.com/fake-news'
-        }
-      ]
+      selectedFakeNew: null
+    }
+  },
+  computed: {
+    pageTitle () {
+      return `COVID-19 Sénégal - Fake News${this.selectedFakeNew ? ` - ${this.selectedFakeNew.titre}` : ''}`
+    },
+    pageDescription () {
+      return this.selectedFakeNew
+        ? this.selectedFakeNew.sous_titre
+        : 'Toutes les fausses informations qui circulent à propos du corona virus au Sénégal.'
+    },
+    pageUrl () {
+      return this.selectedFakeNew
+        ? this.getSharingLink(this.selectedFakeNew)
+        : 'https://covidsn.com/fake-news'
+    }
+  },
+  mounted () {
+    window.document.querySelector('body').scrollTo(0, 0)
+    if (location.hash) {
+      const fakenew = this.fakenews.find(fn => `#${fn.slug}` === location.hash)
+      if (typeof fakenew !== 'undefined') {
+        this.selectedFakeNew = fakenew
+        this.toggleDetails(fakenew)
+        this.$nextTick(() => {
+          window.document.querySelector('body').scrollTo({
+            behavior: 'smooth',
+            top: document.querySelector(location.hash).getBoundingClientRect().top - 110
+          })
+        })
+      }
     }
   },
   methods: {
     toggleDetails (fakenew) {
       fakenew.show_details = !fakenew.show_details
+    },
+    getSharingLink (fakenew) {
+      return `https://covidsn.com/fake-news#${fakenew.slug}`
+    },
+    copySharingLink (fakenew) {
+      this.$copyText(this.getSharingLink(fakenew))
+      fakenew.copiedToClipboard = true
     }
   },
-  mounted () {
-    window.document.querySelector('body').scrollTo(0, 0)
+  head () {
+    return {
+      title: this.pageTitle,
+      meta: [
+        {
+          hid: 'title',
+          name: 'title',
+          content: this.pageTitle
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.pageDescription
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.pageTitle
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.pageDescription
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: this.pageUrl
+        }
+      ]
+    }
   }
 }
 </script>

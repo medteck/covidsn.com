@@ -30,6 +30,7 @@ class CollectionHelper {
         source: fakeNew.source,
         video: fakeNew.video,
         show_details: false,
+        copiedToClipboard: false,
         image: fakeNew.image
           ? `https://directus.medteck.xyz/covidsn/assets/${fakeNew.image.private_hash}?w=400&h=250&f=crop&q=80`
           : null,

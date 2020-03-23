@@ -21,7 +21,7 @@
       <span class="lg:mx-3 md:mx-0">
         Copyright 2020 - COVIDSN.COM
       </span>
-      <br />
+      <br>
       <span class="lg:mx-3 md:mx-0">
         COVIDSN.COM n'est pas rattaché au Gouvernement du Sénégal.
       </span>

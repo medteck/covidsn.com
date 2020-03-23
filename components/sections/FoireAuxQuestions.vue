@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <div class="p-4 section-wrapper">
     <div class="my-6 px-4">
@@ -40,6 +41,9 @@ export default {
       type: Array
     }
   },
+  mounted () {
+    window.document.querySelector('body').scrollTo(0, 0)
+  },
   methods: {
     getHTML (markdown) {
       return marked(markdown)
@@ -76,9 +80,6 @@ export default {
         }
       ]
     }
-  },
-  mounted () {
-    window.document.querySelector('body').scrollTo(0, 0)
   }
 }
 </script>
