@@ -11,7 +11,7 @@ routeMap.forEach((route) => {
     store.getDirectusClient(req).then((directusClient) => {
       route.controller(req, res, directusClient)
     }).catch((error) => {
-      console.log(error)
+      console.log(util.inspect(error))
       res.status(500).send(util.inspect(error))
     })
   })
