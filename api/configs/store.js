@@ -1,6 +1,6 @@
 import DirectusSDK from '@directus/sdk-js'
 import redis from 'redis'
-const { promisify } = require('util')
+const { promisify, inspect } = require('util')
 
 const redisClient = redis.createClient()
 const getAsync = promisify(redisClient.get).bind(redisClient)
@@ -28,6 +28,7 @@ const getDirectusClient = (req) => {
         global.directusClients[getDomain(req)] = new DirectusSDK(config.api_credentials)
         resolve(global.directusClients[getDomain(req)])
       }).catch((error) => {
+        console.error(`Couldn't get config for ${inspect(getDomain(req))}`)
         reject(error)
       })
     }
