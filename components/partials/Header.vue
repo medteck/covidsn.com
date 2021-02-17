@@ -74,10 +74,10 @@ export default {
           title: 'Données',
           path: '/donnees'
         },
-        // {
-        //   title: 'Multimédias',
-        //   path: '/multimedias'
-        // },
+        {
+          title: 'Contenus Multimédia',
+          path: '/multimedias'
+        },
         {
           title: 'Foire aux questions',
           path: '/foire-aux-questions'
