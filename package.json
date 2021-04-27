@@ -21,7 +21,7 @@
     "marked": "^0.8.2",
     "nuxt": "^2.12.2",
     "nuxt-clipboard2": "^0.2.1",
-    "redis": "^3.0.2",
+    "redis": "^3.1.1",
     "typescript": "^3.8.3",
     "vue-tweet-embed": "^2.4.0"
   },
