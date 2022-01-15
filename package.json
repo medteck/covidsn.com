@@ -18,7 +18,7 @@
     "@nuxtjs/pwa": "^3.0.0-0",
     "less": "^3.11.1",
     "less-loader": "^5.0.0",
-    "marked": "^0.8.2",
+    "marked": "^4.0.10",
     "nuxt": "^2.12.2",
     "nuxt-clipboard2": "^0.2.1",
     "redis": "^3.0.2",
